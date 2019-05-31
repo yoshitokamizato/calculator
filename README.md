@@ -1,4 +1,7 @@
 # calclator
+計算機をVue.jsで再現しました。
+
+参考 [Build a Calculator with Vue.js](https://www.youtube.com/watch?v=m1_ih43p24s).
 
 ## Project setup
 ```

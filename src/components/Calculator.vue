@@ -77,7 +77,18 @@ export default {
       this.operatorClicked = true;
     },
     divide() {
-      this.operator = (a, b) => a / b;
+      this.operator = (a, b) => {
+        console.log(b);
+        let calc_result;
+        if (b === 0) {
+          calc_result = '0'
+          console.log(calc_result);
+        } else {
+          calc_result = a / b;
+        }
+        console.log(calc_result);
+        return calc_result;
+      }
       this.setPrevious();
     },
     times() {
@@ -95,9 +106,6 @@ export default {
     equal() {
 
       if (this.equalClicked) {
-        console.log('currentStock' + this.currentStock);
-        console.log('current' + this.current);
-        console.log('previous' + this.previouse);
         this.current = `${this.operator(
           parseFloat(this.current),
           parseFloat(this.currentStock)
